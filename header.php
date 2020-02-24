@@ -22,8 +22,6 @@
                     <li class="nav-item">
                         <a class="nav-link <?php echo is_home() && $page->ID == get_option('page_for_posts') || is_page($page->ID) ? 'active' : "" ?>" href="?page_id=<?php echo ($page->ID); ?>"><?php echo ($page->post_title); ?></a>
                     </li>
-                    <?php var_dump(filter_var($_GET['page_id'], FILTER_SANITIZE_NUMBER_INT))
-                    ?>
                 <?php } ?>
             </ul>
             <form class="form-inline my-2 my-lg-0">

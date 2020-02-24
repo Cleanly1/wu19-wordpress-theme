@@ -13,12 +13,14 @@
     <?php endwhile; ?>
 
 <?php endif; ?>
-
-<?php foreach (get_posts(['sort_order' => 'asc']) as $post) {
-    setup_postdata($post);  ?>
-    <a href="<?php the_permalink(get_option('page_for_posts')); ?>" class="d-flex flex-column"><?php the_title() ?></a>
-    <?php the_post_thumbnail('thumbnail'); ?>
-    <?php the_excerpt(); ?>
-<?php } ?>
-
+<div class="d-flex flex-row ">
+    <?php foreach (get_posts(['sort_order' => 'asc']) as $post) {
+        setup_postdata($post);  ?>
+        <div class="d-flex flex-column w-50">
+            <a href="<?php the_permalink(get_option('page_for_posts')); ?>"><?php the_title() ?></a>
+            <?php the_post_thumbnail('thumbnail'); ?>
+            <?php the_excerpt(); ?>
+        </div>
+    <?php } ?>
+</div>
 <?php get_footer(); ?>
