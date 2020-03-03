@@ -15,3 +15,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('customstyles', get_stylesheet_directory_uri() . '/style.css');
     wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js');
 });
+
+
+require get_template_directory() . "/post-types/student.php";
+require get_template_directory() . "/taxonomies/skill.php";

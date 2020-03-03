@@ -9,14 +9,16 @@
                 <h2><?php the_title(); ?></h2>
                 <?php the_content(); ?>
                 <?php the_date(); ?>
+                <?php previous_post_link() ?>
+                <?php next_post_link() ?>
             </div>
-            <?php previous_post_link() ?>
-            <?php next_post_link() ?>
+
         </div>
 
 
     <?php endwhile; ?>
 
 <?php endif; ?>
+
 
 <?php get_footer(); ?>
